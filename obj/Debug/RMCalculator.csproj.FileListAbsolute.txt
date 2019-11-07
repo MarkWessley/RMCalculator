@@ -1,0 +1,38 @@
+C:\Users\456589\source\repos\RMCalculator\WindowsFormsApp12\obj\Debug\RMCalculator.csprojAssemblyReference.cache
+C:\Users\456589\source\repos\RMCalculator\WindowsFormsApp12\obj\Debug\RMCalculator.Form1.resources
+C:\Users\456589\source\repos\RMCalculator\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.Properties.Resources.resources
+C:\Users\456589\source\repos\RMCalculator\WindowsFormsApp12\obj\Debug\RMCalculator.csproj.GenerateResource.cache
+C:\Users\456589\source\repos\RMCalculator\WindowsFormsApp12\obj\Debug\RMCalculator.csproj.CoreCompileInputs.cache
+C:\Users\456589\source\repos\RMCalculator\WindowsFormsApp12\bin\Debug\WindowsFormsApp12.exe.config
+C:\Users\456589\source\repos\RMCalculator\WindowsFormsApp12\bin\Debug\WindowsFormsApp12.exe
+C:\Users\456589\source\repos\RMCalculator\WindowsFormsApp12\bin\Debug\WindowsFormsApp12.pdb
+C:\Users\456589\source\repos\RMCalculator\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.exe
+C:\Users\456589\source\repos\RMCalculator\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.pdb
+C:\Users\456589\source\repos\CPRG 200 Coursework\RMCalculator\WindowsFormsApp12\bin\Debug\WindowsFormsApp12.exe.config
+C:\Users\456589\source\repos\CPRG 200 Coursework\RMCalculator\WindowsFormsApp12\bin\Debug\WindowsFormsApp12.exe
+C:\Users\456589\source\repos\CPRG 200 Coursework\RMCalculator\WindowsFormsApp12\bin\Debug\WindowsFormsApp12.pdb
+C:\Users\456589\source\repos\CPRG 200 Coursework\RMCalculator\WindowsFormsApp12\obj\Debug\RMCalculator.csprojAssemblyReference.cache
+C:\Users\456589\source\repos\CPRG 200 Coursework\RMCalculator\WindowsFormsApp12\obj\Debug\RMCalculator.Form1.resources
+C:\Users\456589\source\repos\CPRG 200 Coursework\RMCalculator\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.Properties.Resources.resources
+C:\Users\456589\source\repos\CPRG 200 Coursework\RMCalculator\WindowsFormsApp12\obj\Debug\RMCalculator.csproj.GenerateResource.cache
+C:\Users\456589\source\repos\CPRG 200 Coursework\RMCalculator\WindowsFormsApp12\obj\Debug\RMCalculator.csproj.CoreCompileInputs.cache
+C:\Users\456589\source\repos\CPRG 200 Coursework\RMCalculator\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.exe
+C:\Users\456589\source\repos\CPRG 200 Coursework\RMCalculator\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.pdb
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormsApp12\bin\Debug\WindowsFormsApp12.exe.config
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormsApp12\bin\Debug\WindowsFormsApp12.exe
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormsApp12\bin\Debug\WindowsFormsApp12.pdb
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormsApp12\obj\Debug\RMCalculator.csprojAssemblyReference.cache
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.Properties.Resources.resources
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormsApp12\obj\Debug\RMCalculator.csproj.GenerateResource.cache
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.exe
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.pdb
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormsApp12\obj\Debug\RMCalculator.frmMax.resources
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormApp12\bin\Debug\WindowsFormsApp12.exe.config
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormApp12\bin\Debug\WindowsFormsApp12.exe
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormApp12\bin\Debug\WindowsFormsApp12.pdb
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormApp12\obj\Debug\RMCalculator.csprojAssemblyReference.cache
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormApp12\obj\Debug\RMCalculator.frmMax.resources
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormApp12\obj\Debug\WindowsFormsApp12.Properties.Resources.resources
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormApp12\obj\Debug\RMCalculator.csproj.GenerateResource.cache
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormApp12\obj\Debug\WindowsFormsApp12.exe
+C:\Users\mwess\source\repos\RMCalculator\WindowsFormApp12\obj\Debug\WindowsFormsApp12.pdb
