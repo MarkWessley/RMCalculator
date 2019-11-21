@@ -195,27 +195,20 @@ namespace RMCalculator
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            //ClearValues(new object(), new EventArgs());
             ClearValues(sender, e);
-            //cboMovement.SelectedText = "--Movement--";
             txtWeight.Text = "";
             txtReps.Text = "";
-            //cboRM.SelectedText = "--Percent--";
-            //lstRM.Items.Clear();
-            //lstPercent.Items.Clear();
-            //txtPercent.Text = "";
         }
 
-        //if weight or reps are changed line 240 in designer
+        //if weight or reps are changed in designer
         private void ClearValues(object sender, EventArgs e)
         {
-            
             cboMovement.Text = "";
             cboMovement.SelectedText = "--Movement--";
-            lstRM.Items.Clear();
-            lstPercent.Items.Clear();
             cboRM.Text = "";
             cboRM.SelectedText = "--Percent--";
+            lstRM.Items.Clear();
+            lstPercent.Items.Clear();
             txtPercent.Text = "";
         }
 
