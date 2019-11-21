@@ -9,11 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /* Most current version November 2019
-add validator class
-remove textboxes for rm values
-add GetDisplayText
-display data in multi-line text box instead of listbox
-use Product Maintenance example for File I/O
+
 */
 namespace RMCalculator
 {
@@ -28,12 +24,14 @@ namespace RMCalculator
         private void frmMax_Load(object sender, EventArgs e)
         {
             //Movement checkbox
+            cboMovement.SelectedText = "--Movement--";
             cboMovement.Items.Add("Back Squat");
             cboMovement.Items.Add("Shoulder Press");
             cboMovement.Items.Add("Deadlift");
             cboMovement.Items.Add("Clean");
             cboMovement.Items.Add("Snatch");
             //RM checkbox
+            cboRM.SelectedText = "--Percent--";
             cboRM.Items.Add("1RM");
             cboRM.Items.Add("2RM");
             cboRM.Items.Add("3RM");
@@ -47,29 +45,14 @@ namespace RMCalculator
             cboRM.Items.Add("15RM");
             cboRM.Items.Add("20RM");
 
-
-
             txtDateTime.Text = currentDateTime.ToString("MM dd yyyy");
-            //set textbox values to 0
-            txt1RM.Text = "0";
-            txt2RM.Text = "0";
-            txt3RM.Text = "0";
-            txt4RM.Text = "0";
-            txt5RM.Text = "0";
-            txt6RM.Text = "0";
-            txt7RM.Text = "0";
-            txt8RM.Text = "0";
-            txt9RM.Text = "0";
-            txt10RM.Text = "0";
-            txt15RM.Text = "0";
-            txt20RM.Text = "0";
         }
 
 
         decimal weight;//weight in lbs or kg no conversion needed
         //string unit;//lbs or kg
         decimal reps;//repetitions completed
-        decimal oneRM;
+        decimal oneRM, twoRM, threeRM, fourRM, fiveRM, sixRM, sevenRM, eightRM, nineRM, tenRM, fifteenRM, twentyRM;
 
 
         private void btnCalculate_Click(object sender, EventArgs e)
@@ -78,23 +61,6 @@ namespace RMCalculator
             {
                 if (IsValidData())
                 {
-                    //calculate RM from 1RM
-                    //create a calculate object to find RM values
-                    Calculator c = new Calculator(
-                        Convert.ToDecimal(txt1RM.Text),
-                        Convert.ToDecimal(txt2RM.Text),
-                        Convert.ToDecimal(txt3RM.Text),
-                        Convert.ToDecimal(txt4RM.Text),
-                        Convert.ToDecimal(txt5RM.Text),
-                        Convert.ToDecimal(txt6RM.Text),
-                        Convert.ToDecimal(txt7RM.Text),
-                        Convert.ToDecimal(txt8RM.Text),
-                        Convert.ToDecimal(txt9RM.Text),
-                        Convert.ToDecimal(txt10RM.Text),
-                        Convert.ToDecimal(txt15RM.Text),
-                        Convert.ToDecimal(txt20RM.Text)
-                    );
-
                     //inputs
                     reps = Convert.ToDecimal(txtReps.Text);
                     weight = Convert.ToDecimal(txtWeight.Text);
@@ -123,7 +89,7 @@ namespace RMCalculator
                     lstRM.Items.Add(currentDateTime.ToString("MMMM dd yyyy"));
                     lstRM.Items.Add(cboMovement.Text);
                     lstRM.Items.Add("1RM = " + oneRM);
-                    //use for lstRM listbox
+                    //lstRM listbox
                     for (int i = 0; i < dict.Count; i++)
                     {
                         var p = (dict.Keys.ElementAt(i));
@@ -135,18 +101,19 @@ namespace RMCalculator
 
                     //can remove
                     //outputs results to text boxes from rmArray
-                    txt1RM.Text = oneRM.ToString("N0");
-                    txt2RM.Text = rmArray[0].ToString("N0");//2
-                    txt3RM.Text = rmArray[1].ToString("N0");//3
-                    txt4RM.Text = rmArray[2].ToString("N0");//4
-                    txt5RM.Text = rmArray[3].ToString("N0");//5
-                    txt6RM.Text = rmArray[4].ToString("N0");//6
-                    txt7RM.Text = rmArray[5].ToString("N0");//7
-                    txt8RM.Text = rmArray[6].ToString("N0");//8
-                    txt9RM.Text = rmArray[7].ToString("N0");//9
-                    txt10RM.Text = rmArray[8].ToString("N0");//10
-                    txt15RM.Text = rmArray[9].ToString("N0");//15
-                    txt20RM.Text = rmArray[10].ToString("N0");//20
+                    //txt1RM.Text = oneRM.ToString("N0");
+                    //assigns values from array to be used in percentRM
+                    twoRM = rmArray[0];
+                    threeRM = rmArray[1];
+                    fourRM = rmArray[2];
+                    fiveRM = rmArray[3];
+                    sixRM = rmArray[4];
+                    sevenRM = rmArray[5];
+                    eightRM = rmArray[6];
+                    nineRM = rmArray[7];
+                    tenRM = rmArray[8];
+                    fifteenRM = rmArray[9];
+                    twentyRM = rmArray[10];
                 }
             }
             //specific exception handling
@@ -228,48 +195,27 @@ namespace RMCalculator
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            cboMovement.Text = "";
+            //ClearValues(new object(), new EventArgs());
+            ClearValues(sender, e);
+            //cboMovement.SelectedText = "--Movement--";
             txtWeight.Text = "";
             txtReps.Text = "";
-            cboRM.Text = "";
-            //can remove
-            txt1RM.Text = "0";
-            txt2RM.Text = "0";
-            txt2RM.Text = "0";
-            txt3RM.Text = "0";
-            txt4RM.Text = "0";
-            txt5RM.Text = "0";
-            txt6RM.Text = "0";
-            txt7RM.Text = "0";
-            txt8RM.Text = "0";
-            txt9RM.Text = "0";
-            txt10RM.Text = "0";
-            txt15RM.Text = "0";
-            txt20RM.Text = "0";
-            lstRM.Items.Clear();
-            lstPercent.Items.Clear();
-            txtPercent.Text = "";
+            //cboRM.SelectedText = "--Percent--";
+            //lstRM.Items.Clear();
+            //lstPercent.Items.Clear();
+            //txtPercent.Text = "";
         }
 
-        //if weight is changed line 240 in designer
-        //could add if reps is changed
+        //if weight or reps are changed line 240 in designer
         private void ClearValues(object sender, EventArgs e)
         {
-            cboRM.Text = "";
-            txt1RM.Text = "0";
-            txt2RM.Text = "0";
-            txt3RM.Text = "0";
-            txt4RM.Text = "0";
-            txt5RM.Text = "0";
-            txt6RM.Text = "0";
-            txt7RM.Text = "0";
-            txt8RM.Text = "0";
-            txt9RM.Text = "0";
-            txt10RM.Text = "0";
-            txt15RM.Text = "0";
-            txt20RM.Text = "0";
+            
+            cboMovement.Text = "";
+            cboMovement.SelectedText = "--Movement--";
             lstRM.Items.Clear();
             lstPercent.Items.Clear();
+            cboRM.Text = "";
+            cboRM.SelectedText = "--Percent--";
             txtPercent.Text = "";
         }
 
@@ -278,7 +224,7 @@ namespace RMCalculator
             this.Close();
         }
 
-        //to fill percentages listbox
+        //to fill percentages listbox and textbox
         private void BtnPercentages_Click(object sender, EventArgs e)
         {
             Convert.ToString(cboRM.Text);
@@ -307,56 +253,55 @@ namespace RMCalculator
             //percent RM textbox
             txtPercent.AppendText(currentDateTime.ToString("MMMM dd yyyy") + "\r\n");
             txtPercent.AppendText(cboRM.Text + " " + cboMovement.Text + "\r\n");
-
             for (int i = 0; i < percentDict.Count; i++)
             {
                 if (cboRM.Text == "1RM")
                 {
-                    rm = Convert.ToDecimal(txt1RM.Text);
+                    rm = oneRM;
                 }
                 else if (cboRM.Text == "2RM")
                 {
-                    rm = Convert.ToDecimal(txt2RM.Text);
+                    rm = twoRM;
                 }
                 else if (cboRM.Text == "3RM")
                 {
-                    rm = Convert.ToDecimal(txt3RM.Text);
+                    rm = threeRM;
                 }
                 else if (cboRM.Text == "4RM")
                 {
-                    rm = Convert.ToDecimal(txt4RM.Text);
+                    rm = fourRM;
                 }
                 else if (cboRM.Text == "5RM")
                 {
-                    rm = Convert.ToDecimal(txt5RM.Text);
+                    rm = fiveRM;
                 }
                 else if (cboRM.Text == "6RM")
                 {
-                    rm = Convert.ToDecimal(txt6RM.Text);
+                    rm = sixRM;
                 }
                 else if (cboRM.Text == "7RM")
                 {
-                    rm = Convert.ToDecimal(txt7RM.Text);
+                    rm = sevenRM;
                 }
                 else if (cboRM.Text == "8RM")
                 {
-                    rm = Convert.ToDecimal(txt8RM.Text);
+                    rm = eightRM;
                 }
                 else if (cboRM.Text == "9RM")
                 {
-                    rm = Convert.ToDecimal(txt9RM.Text);
+                    rm = nineRM;
                 }
                 else if (cboRM.Text == "10RM")
                 {
-                    rm = Convert.ToDecimal(txt10RM.Text);
+                    rm = tenRM;
                 }
                 else if (cboRM.Text == "15RM")
                 {
-                    rm = Convert.ToDecimal(txt15RM.Text);
+                    rm = fifteenRM;
                 }
                 else if (cboRM.Text == "20RM")
                 {
-                    rm = Convert.ToDecimal(txt20RM.Text);
+                    rm = twentyRM;
                 }
                 else
                 {
