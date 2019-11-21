@@ -8,21 +8,19 @@ namespace RMCalculator
 {
     class Calculator
     {
-        
-        
         //linked to auto generated constructor below
-        private decimal oneRM;//changed from v1 to oneRM
+        private decimal oneRM;
         private decimal twoRM;
         private decimal threeRM;
         private decimal fourRM;
         private decimal fiveRM;
         private decimal sixRM;
         private decimal sevenRM;
-        private decimal eightRM;//8
+        private decimal eightRM;
         private decimal nineRM;
-        private decimal tenRM;//10
-        private decimal fifteenRM;//15
-        private decimal twentyRM;//20
+        private decimal tenRM;
+        private decimal fifteenRM;
+        private decimal twentyRM;
 
 
         //date of max lift
@@ -103,11 +101,7 @@ namespace RMCalculator
             set { if (value >= 0) twentyRM = value; }
         }
 
-        //public string ListRM
-        //{
-        //    get { return listRM; }
-        //    set { listRM = value; }
-        //}
+        
         //constructor
         //takes data from weight and reps in GUI
         //sends data to array in FileIO

@@ -8,9 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//Most current version November 2019
-//use Product Maintenance example for File I/O
-
+/* Most current version November 2019
+add validator class
+remove textboxes for rm values
+add GetDisplayText
+display data in multi-line text box instead of listbox
+use Product Maintenance example for File I/O
+*/
 namespace RMCalculator
 {
     public partial class frmMax : Form
@@ -46,7 +50,7 @@ namespace RMCalculator
 
 
             txtDateTime.Text = currentDateTime.ToString("MM dd yyyy");
-            //set values to 0
+            //set textbox values to 0
             txt1RM.Text = "0";
             txt2RM.Text = "0";
             txt3RM.Text = "0";
@@ -119,7 +123,7 @@ namespace RMCalculator
                     lstRM.Items.Add(currentDateTime.ToString("MMMM dd yyyy"));
                     lstRM.Items.Add(cboMovement.Text);
                     lstRM.Items.Add("1RM = " + oneRM);
-                    //use for listbox
+                    //use for lstRM listbox
                     for (int i = 0; i < dict.Count; i++)
                     {
                         var p = (dict.Keys.ElementAt(i));
@@ -129,6 +133,7 @@ namespace RMCalculator
                         rmArray[i] = repmax;
                     }
 
+                    //can remove
                     //outputs results to text boxes from rmArray
                     txt1RM.Text = oneRM.ToString("N0");
                     txt2RM.Text = rmArray[0].ToString("N0");//2
@@ -227,6 +232,7 @@ namespace RMCalculator
             txtWeight.Text = "";
             txtReps.Text = "";
             cboRM.Text = "";
+            //can remove
             txt1RM.Text = "0";
             txt2RM.Text = "0";
             txt2RM.Text = "0";
@@ -242,6 +248,7 @@ namespace RMCalculator
             txt20RM.Text = "0";
             lstRM.Items.Clear();
             lstPercent.Items.Clear();
+            txtPercent.Text = "";
         }
 
         //if weight is changed line 240 in designer
@@ -263,6 +270,7 @@ namespace RMCalculator
             txt20RM.Text = "0";
             lstRM.Items.Clear();
             lstPercent.Items.Clear();
+            txtPercent.Text = "";
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -292,9 +300,14 @@ namespace RMCalculator
                     };
 
             decimal[] percentArray = new decimal[percentDict.Count];
-            //for percent RM listbox
+            //percent RM listbox
             lstPercent.Items.Add(currentDateTime.ToString("MMMM dd yyyy"));
             lstPercent.Items.Add(cboRM.Text + " " + cboMovement.Text);
+
+            //percent RM textbox
+            txtPercent.AppendText(currentDateTime.ToString("MMMM dd yyyy") + "\r\n");
+            txtPercent.AppendText(cboRM.Text + " " + cboMovement.Text + "\r\n");
+
             for (int i = 0; i < percentDict.Count; i++)
             {
                 if (cboRM.Text == "1RM")
@@ -355,6 +368,7 @@ namespace RMCalculator
                 var r = (percentDict[percentDict.Keys.ElementAt(i)]);
                 percentArray[i] = percentMax;
                 lstPercent.Items.Add(r + " = " + percentMax.ToString("N0"));
+                txtPercent.AppendText(r + " = " + percentMax.ToString("N0") + "\r\n");
             }
         }  
     }

@@ -71,13 +71,14 @@ namespace RMCalculator
             this.txt20RM = new System.Windows.Forms.TextBox();
             this.lstPercent = new System.Windows.Forms.ListBox();
             this.txt7RM = new System.Windows.Forms.TextBox();
+            this.txtPercent = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lstRM
             // 
             this.lstRM.FormattingEnabled = true;
             this.lstRM.ItemHeight = 24;
-            this.lstRM.Location = new System.Drawing.Point(326, 214);
+            this.lstRM.Location = new System.Drawing.Point(284, 210);
             this.lstRM.Margin = new System.Windows.Forms.Padding(4);
             this.lstRM.Name = "lstRM";
             this.lstRM.Size = new System.Drawing.Size(289, 364);
@@ -461,7 +462,7 @@ namespace RMCalculator
             // 
             this.lstPercent.FormattingEnabled = true;
             this.lstPercent.ItemHeight = 24;
-            this.lstPercent.Location = new System.Drawing.Point(632, 214);
+            this.lstPercent.Location = new System.Drawing.Point(581, 210);
             this.lstPercent.Margin = new System.Windows.Forms.Padding(4);
             this.lstPercent.Name = "lstPercent";
             this.lstPercent.Size = new System.Drawing.Size(289, 364);
@@ -476,6 +477,14 @@ namespace RMCalculator
             this.txt7RM.TabIndex = 41;
             this.txt7RM.TabStop = false;
             // 
+            // txtPercent
+            // 
+            this.txtPercent.Location = new System.Drawing.Point(877, 210);
+            this.txtPercent.Multiline = true;
+            this.txtPercent.Name = "txtPercent";
+            this.txtPercent.Size = new System.Drawing.Size(226, 364);
+            this.txtPercent.TabIndex = 42;
+            // 
             // frmMax
             // 
             this.AcceptButton = this.btnCalculate;
@@ -483,6 +492,7 @@ namespace RMCalculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(1115, 729);
+            this.Controls.Add(this.txtPercent);
             this.Controls.Add(this.txt7RM);
             this.Controls.Add(this.lstPercent);
             this.Controls.Add(this.label17);
@@ -579,6 +589,7 @@ namespace RMCalculator
         private System.Windows.Forms.TextBox txt20RM;
         private System.Windows.Forms.ListBox lstPercent;
         private System.Windows.Forms.TextBox txt7RM;
+        private System.Windows.Forms.TextBox txtPercent;
     }
 }
 
